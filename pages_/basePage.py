@@ -13,7 +13,6 @@ class BasePage():
             logger("INFO", f"Element with locator:{locator[1]} found")
             return element
         except:
-            print("Error: Element not found")
             logger("ERROR", f"Error: Element not found")
             exit(1)
 
