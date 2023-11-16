@@ -31,7 +31,7 @@ class ProductDeletion(unittest.TestCase):
         cartPageObj = CartPage(self.driver)
         cartPageObj.validate_empty_or_not_cart_page()
 
-    def test_for_first_product_deletion(self):
+    def test_first_product_deletion(self):
         loginPageObj = LogInPage(self.driver)
         loginPageObj.fill_username_field("jenyakirakosyan27@gmail.com")
         loginPageObj.click_to_continue_button()
