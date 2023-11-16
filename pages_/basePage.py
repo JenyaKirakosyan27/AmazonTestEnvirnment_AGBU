@@ -37,7 +37,7 @@ class BasePage():
     def _fill_field(self, element, text):
         element.clear()
         element.send_keys(text)
-        logger("INFO", "successfuly added text to element")
+        logger("INFO", "successful added text to element")
 
     def _click_to_element(self, webElement):
         webElement.click()
