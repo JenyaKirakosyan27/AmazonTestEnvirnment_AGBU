@@ -64,5 +64,6 @@ class ProductDeletion(unittest.TestCase):
         while cartCurrentElement != 0:
             cartPageObj.delete_first_product_from_cart()
             cartCurrentElement -= 1
+    
     def tearDown(self):
         self.driver.close()
