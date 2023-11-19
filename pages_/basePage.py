@@ -3,6 +3,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from common_.utilities_.customLogger import *
 
+
 class BasePage():
     def __init__(self, driver: webdriver.Chrome):
         self.driver = driver
@@ -13,6 +14,7 @@ class BasePage():
             logger("INFO", f"Element with locator:{locator[1]} found")
             return element
         except:
+            print("Error: Element not found")
             logger("ERROR", f"Error: Element not found")
             exit(1)
 
@@ -43,6 +45,10 @@ class BasePage():
 
     def _get_text(self, webElement):
         return webElement.text
+
+    def _get_element_text_by_locator(self, locator):
+        element = self._find_element(locator)
+        return element.text
 
     def _get_element_text_by_locator(self, locator):
         element = self._find_element(locator)
