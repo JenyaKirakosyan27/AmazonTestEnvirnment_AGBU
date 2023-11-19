@@ -36,3 +36,6 @@ class LogInPage(BasePage):
         assert self._get_element_text_by_locator(self.__errorMessageYourEmailAddressOrMobilePhoneNumberIncorrectLocator) == "We cannot find an account with that email address"
 
 
+
+
+
