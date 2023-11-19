@@ -7,8 +7,9 @@ class NavigationBar(BasePage):
     def __init__(self, driver: webdriver.Chrome):
         super().__init__(driver)
         self.__cartButtonLocator = (By.ID, "nav-cart-count-container")
-        self.__productNameFieldLocator = (By.NAME, "field-keywords")
+        self.__productNameFieldLocator = (By.ID, "twotabsearchtextbox")
         self.__searchButtonLocator = (By.ID, "nav-search-submit-button")
+
 
     def click_to_cart_button(self):
         cartButtonElement = self._find_element(self.__cartButtonLocator)
