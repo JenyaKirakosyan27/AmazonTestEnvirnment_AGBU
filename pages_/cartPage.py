@@ -33,3 +33,9 @@ class CartPage(BasePage):
     def get_cart_count_element(self):
         cartCountElement = self._find_element(self.__cartCountLocator)
         return int(self._get_text(cartCountElement))
+
+    def delete_all_product_from_cart(self):
+        cartCountElement = self._find_element(self.__cartCountLocator)
+        while int(self._get_text(cartCountElement)) != 0:
+            firstProductDeleteButtonElement = self._find_element(self.__firstProductDeleteButtonLocator)
+            self._click_to_element(firstProductDeleteButtonElement)
