@@ -37,7 +37,6 @@ class ProductRelatedTest(unittest.TestCase):
         productDetailsPageObj.click_to_add_to_cart_button()
         self.assertEqual(self.driver.title, "Amazon.com Shopping Cart")
 
-
     def tearDown(self):
         self.driver.close()
 
