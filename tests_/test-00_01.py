@@ -31,7 +31,6 @@ class DeselectAllItemsTest(unittest.TestCase):
         cartPageObj = CartPage(self.driver)
         cartPageObj.deselect_all_items_from_cart()
 
-
     def tearDown(self):
         self.driver.close()
 
