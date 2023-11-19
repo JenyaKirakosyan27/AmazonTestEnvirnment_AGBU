@@ -29,7 +29,7 @@ class ProductSaveForLaterFromCartTest(unittest.TestCase):
         navigationBarObj.click_to_cart_button()
 
         cartPageObj = CartPage(self.driver)
-        cartPageObj.save_for_later_firstProduct_from_cart()
+        cartPageObj.save_for_later_first_product_from_cart()
 
     def tearDown(self):
         self.driver.close()
