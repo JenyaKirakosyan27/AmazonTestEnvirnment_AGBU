@@ -22,7 +22,7 @@ class ProductRelatedTest(unittest.TestCase):
         loginPageObj = LogInPage(self.driver)
         loginPageObj.fill_username_field("jenyakirakosyan27@gmail.com")
         loginPageObj.click_to_continue_button()
-        loginPageObj.fill_password_fild("//eva[@]")
+        loginPageObj.fill_password_fild("//eva[@tsaturyan]")
         sleep(10) # Added sleep time to avoid captcha from amazon
         loginPageObj.click_to_signin_button()
 
@@ -35,6 +35,9 @@ class ProductRelatedTest(unittest.TestCase):
 
         productDetailsPageObj = ProductDetailsPage(self.driver)
         productDetailsPageObj.click_to_add_to_cart_button()
+        self.assertEqual(self.driver.title, "Amazon.com Shopping Cart")
+
 
     def tearDown(self):
         self.driver.close()
+
