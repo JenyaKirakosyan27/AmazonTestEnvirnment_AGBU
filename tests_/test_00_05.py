@@ -44,4 +44,3 @@ class LogInTest(unittest.TestCase):
         self.driver.close()
 
 
-
